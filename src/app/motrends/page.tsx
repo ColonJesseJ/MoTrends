@@ -1,7 +1,9 @@
-export default function() {
+const moTrends = () => {
     return (
-        <div>
+        <>
 
-        </div>
+        </>
     )
 }
+
+export default moTrends;
