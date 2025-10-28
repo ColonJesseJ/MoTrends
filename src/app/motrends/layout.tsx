@@ -10,7 +10,7 @@ const MoLayout = ({ children }: { children: React.ReactNode }) => {
                 {/* Sidebar right next to the main content*/}
                 <Sidebar />
                 {/* Main content next to sidebar*/}
-                <main className="flex flex-1 overflow-auto">
+                <main className="flex flex-1 overflow-auto justify-center">
                     {children}
                 </main>
             </div>
