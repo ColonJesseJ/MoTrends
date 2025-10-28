@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Logo from './Logo'
 
 // top left part of the header under to keep on left side
-const Head = () => {
+const Head: React.FC = () => {
     return (
         <div className='flex items-center gap-4'>
             {/* flex with gap starting off with logo*/}

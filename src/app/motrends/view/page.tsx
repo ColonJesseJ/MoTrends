@@ -1,8 +1,8 @@
-const view = () => {
+const View = () => {
     return (
         <>
 
         </>
     )
 }
-export default view;
+export default View;

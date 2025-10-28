@@ -8,9 +8,11 @@ import { FaUniversity } from "react-icons/fa";
 import { FaChartBar } from "react-icons/fa6";
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
-const Sidebar = () => {
-    const [selected, setSelected] = useState<string>("");
+const Sidebar: React.FC = () => {
+    const pathname = usePathname();
+    const onPath = (path: string) => pathname === path;
     const [expanded, setExpanded] = useState(false); // expanded state for mouse 
     return (
         <aside
@@ -22,7 +24,7 @@ const Sidebar = () => {
                 <Link
                     href="/"
                     className={`mt-6 mb-6 flex items-center justify-start h-8 ${expanded ? "w-44" : "w-10"
-                        } gap-5 rounded-2xl transition-[width] duration-300 pl-2 `}
+                        } gap-5 rounded-2xl pl-2 `}
                 >
                     <IoIosArrowBack className="text-2xl shrink-0" />
                     {expanded && (
@@ -42,9 +44,8 @@ const Sidebar = () => {
                     {/* DASHBOARD */}
                     <Link
                         href="/motrends"
-                        onClick={() => setSelected("dashboard")}
                         className={`mt-2 flex items-center justify-start h-8 ${expanded ? "w-44" : "w-10"
-                            } gap-5 rounded-2xl transition-[width]  duration-200 ${selected === "dashboard"
+                            } gap-5 rounded-2xl ${onPath("/motrends")
                                 ? "bg-blue-100 text-blue-500 pl-2"
                                 : "text-gray-500 pl-2"
                             }`}
@@ -52,7 +53,7 @@ const Sidebar = () => {
                         <MdOutlineDashboard className="text-2xl shrink-0" />
                         {expanded && (
                             <span
-                                className={`text-base font-bold ${selected === "dashboard" ? "text-blue-500" : "text-gray-700"
+                                className={`text-base font-bold ${onPath("/motrends") ? "text-blue-500" : "text-gray-700"
                                     }`}
                             >
                                 Dashboard
@@ -63,9 +64,8 @@ const Sidebar = () => {
                     {/* CREATE */}
                     <Link
                         href="/motrends/create"
-                        onClick={() => setSelected("create")}
                         className={`flex items-center justify-start h-8 ${expanded ? "w-44" : "w-10"
-                            } gap-5 rounded-2xl transition-[width] duration-200 ${selected === "create"
+                            } gap-5 rounded-2xl ${onPath("/motrends/create")
                                 ? "bg-blue-100 text-blue-500 pl-2"
                                 : "text-gray-500 pl-2"
                             }`}
@@ -74,7 +74,7 @@ const Sidebar = () => {
                         {expanded && (
                             <span
                                 className={`text-base font-bold transition-[width] duration-300 ease-in-out 
-                                ${selected === "create" ? "text-blue-500" : "text-gray-700"}`}
+                                ${onPath("/motrends/create") ? "text-blue-500" : "text-gray-700"}`}
                             >
                                 Create
                             </span>
@@ -84,9 +84,8 @@ const Sidebar = () => {
                     {/* VIEW */}
                     <Link
                         href="/motrends/view"
-                        onClick={() => setSelected("view")}
                         className={`flex items-center justify-start h-8 ${expanded ? "w-44" : "w-10"
-                            } gap-5 rounded-2xl transition-[width] duration-200 ${selected === "view"
+                            } gap-5 rounded-2xl ${onPath("/motrends/view")
                                 ? "bg-blue-100 text-blue-500 pl-2"
                                 : "text-gray-500 pl-2"
                             }`}
@@ -94,7 +93,7 @@ const Sidebar = () => {
                         <LuLayoutList className="text-2xl shrink-0" />
                         {expanded && (
                             <span
-                                className={`text-base font-bold ${selected === "view" ? "text-blue-500" : "text-gray-700"
+                                className={`text-base font-bold ${onPath("motrends/view") ? "text-blue-500" : "text-gray-700"
                                     }`}
                             >
                                 View
@@ -104,10 +103,9 @@ const Sidebar = () => {
 
                     {/* ACCOUNTS */}
                     <Link
-                        href="/motrends"
-                        onClick={() => setSelected("accounts")}
+                        href="/motrends/accounts"
                         className={`flex items-center justify-start h-8 ${expanded ? "w-44" : "w-10"
-                            } gap-5 rounded-2xl transition-width duration-200 ${selected === "accounts"
+                            } gap-5 rounded-2xl ${onPath("/motrends/accounts")
                                 ? "bg-blue-100 text-blue-500 pl-2"
                                 : "text-gray-500 pl-2"
                             }`}
@@ -115,8 +113,7 @@ const Sidebar = () => {
                         <MdOutlinePeople className="text-2xl shrink-0" />
                         {expanded && (
                             <span
-                                className={`text-base font-bold ${selected === "accounts" ? "text-blue-500" : "text-gray-700"
-                                    }`}
+                                className={`text-base font-bold ${onPath("/motrends/accounts") ? "text-blue-500" : "text-gray-700"}`}
                             >
                                 Accounts
                             </span>
@@ -132,18 +129,15 @@ const Sidebar = () => {
                 >
                     {/* LIBRARY */}
                     <Link
-                        href="/motrends"
-                        onClick={() => setSelected("library")}
+                        href="/motrends/library"
                         className={`mt-2 flex items-center justify-start h-8 ${expanded ? "w-44" : "w-10"
-                            } gap-5 rounded-2xl transition-[width] duration-200 ${selected === "library"
-                                ? "bg-blue-100 text-blue-500 pl-2"
-                                : "text-gray-500 pl-2"
-                            }`}
+                            } gap-5 rounded-2xl  
+                            ${onPath("/motrends/library") ? "bg-blue-100 text-blue-500 pl-2" : "text-gray-500 pl-2"}`}
                     >
                         <FaUniversity className="text-2xl shrink-0" />
                         {expanded && (
                             <span
-                                className={`text-base font-bold ${selected === "library" ? "text-blue-500" : "text-gray-700"
+                                className={`text-base font-bold ${onPath("/motrends/library") ? "text-blue-500" : "text-gray-700"
                                     }`}
                             >
                                 Library
@@ -152,10 +146,9 @@ const Sidebar = () => {
                     </Link>
 
                     <Link
-                        href="/motrends"
-                        onClick={() => setSelected("configure")}
+                        href="/motrends/configure"
                         className={` flex items-center justify-start h-8 ${expanded ? "w-44" : "w-10"
-                            } gap-5 rounded-2xl transition-[width] duration-200 ${selected === "configure"
+                            } gap-5 rounded-2xl ${onPath("/motrends/configure")
                                 ? "bg-blue-100 text-blue-500 pl-3"
                                 : "text-gray-500 pl-3"
                             }`}
@@ -163,7 +156,7 @@ const Sidebar = () => {
                         <FaChartBar className="text-xl shrink-0" />
                         {expanded && (
                             <span
-                                className={`text-base font-bold ${selected === "configure" ? "text-blue-500" : "text-gray-700"
+                                className={`text-base font-bold ${onPath("motrends/configure") ? "text-blue-500" : "text-gray-700"
                                     }`}
                             >
                                 Configure

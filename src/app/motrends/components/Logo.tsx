@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 // LOGO
-const Logo = () => {
+const Logo: React.FC = () => {
     return (
         <Image
             src="https://framerusercontent.com/images/SN1KknlqtnfMhuO28O7dyyGrNOk.png"

@@ -5,7 +5,7 @@ import Logo from './Logo'
 import { RxDashboard } from "react-icons/rx";
 import { FaRegBell } from "react-icons/fa";
 
-const Header = () => {
+const Header: React.FC = () => {
     return (
         <header className="w-full bg-[#F9FAFB] border-b shadow-sm items-center justify-between flex sticky top-0 z-[20] mx-auto px-6 py-4 border-gray-200" >
             {/* sticky header uptop to remake MoFlo Cloud application */}

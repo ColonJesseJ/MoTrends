@@ -1,4 +1,4 @@
-const moTrends = () => {
+const MoTrends: React.FC = () => {
     return (
         <>
 
@@ -6,4 +6,4 @@ const moTrends = () => {
     )
 }
 
-export default moTrends;
+export default MoTrends;
