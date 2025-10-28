@@ -7,42 +7,169 @@ import { LuLayoutList } from "react-icons/lu";
 import { FaUniversity } from "react-icons/fa";
 import { FaChartBar } from "react-icons/fa6";
 import { useState } from "react";
+import Link from "next/link";
 
 const Sidebar = () => {
+    const [selected, setSelected] = useState<string>("");
     const [expanded, setExpanded] = useState(false); // expanded state for mouse 
     return (
         <aside
-            className={`h-full transition-[width] duration-150 ${expanded ? "w-46" : "w-16"}`}
+            className={`h-full transition-[width] bg-white shadow-sm ease-in-out duration-250 ${expanded ? "w-52" : "w-20"}`}
             onMouseEnter={() => setExpanded(true)} // when enter expand
             onMouseLeave={() => setExpanded(false)} // leave expand
         >
-            <nav className="h-full flex flex-col bg-white shadow-sm pl-5 pr-9">
-                <div className=" pt-10 pb-2 flex" >
-                    <button className=" text-gray-500 text-lg"   >
-                        <IoIosArrowBack />
-                    </button>
-                </div>
-                <ul className=" flex flex-col flex-2 gap-5 mt-12">
-                    <li className="text-xl text-gray-500" >
-                        <MdOutlineDashboard />
-                    </li>
-                    <li className="text-xl text-gray-500" >
-                        <PiNotePencilBold />
-                    </li>
-                    <li className="text-xl text-gray-500" >
-                        <LuLayoutList />
-                    </li>
-                    <li className="text-xl text-gray-500">
-                        <MdOutlinePeople />
-                    </li>
+            <nav className="h-full flex flex-col p-2">
+                <Link
+                    href="/"
+                    className={`mt-6 mb-6 flex items-center justify-start h-8 ${expanded ? "w-44" : "w-10"
+                        } gap-5 rounded-2xl transition-[width] duration-300 pl-2 `}
+                >
+                    <IoIosArrowBack className="text-2xl shrink-0" />
+                    {expanded && (
+                        <span
+                            className={`text-base font-semibold text-gray-700 "}`}
+                        >
+                            Back
+                        </span>
+                    )}
+                </Link>
+
+                {expanded && <span className="text-sm text-gray-500 font-mono pl-3 transition-[width] duration-200">
+                    MOTRENDS
+                </span>}
+                <ul className={`flex flex-col flex-[2] gap-4 ${expanded ? "mt-0" : "mt-5"}`}
+                >
+                    {/* DASHBOARD */}
+                    <Link
+                        href="/motrends"
+                        onClick={() => setSelected("dashboard")}
+                        className={`mt-2 flex items-center justify-start h-8 ${expanded ? "w-44" : "w-10"
+                            } gap-5 rounded-2xl transition-[width]  duration-200 ${selected === "dashboard"
+                                ? "bg-blue-100 text-blue-500 pl-2"
+                                : "text-gray-500 pl-2"
+                            }`}
+                    >
+                        <MdOutlineDashboard className="text-2xl shrink-0" />
+                        {expanded && (
+                            <span
+                                className={`text-base font-bold ${selected === "dashboard" ? "text-blue-500" : "text-gray-700"
+                                    }`}
+                            >
+                                Dashboard
+                            </span>
+                        )}
+                    </Link>
+
+                    {/* CREATE */}
+                    <Link
+                        href="/motrends/create"
+                        onClick={() => setSelected("create")}
+                        className={`flex items-center justify-start h-8 ${expanded ? "w-44" : "w-10"
+                            } gap-5 rounded-2xl transition-[width] duration-200 ${selected === "create"
+                                ? "bg-blue-100 text-blue-500 pl-2"
+                                : "text-gray-500 pl-2"
+                            }`}
+                    >
+                        <PiNotePencilBold className="text-2xl shrink-0" />
+                        {expanded && (
+                            <span
+                                className={`text-base font-bold transition-[width] duration-300 ease-in-out 
+                                ${selected === "create" ? "text-blue-500" : "text-gray-700"}`}
+                            >
+                                Create
+                            </span>
+                        )}
+                    </Link>
+
+                    {/* VIEW */}
+                    <Link
+                        href="/motrends/view"
+                        onClick={() => setSelected("view")}
+                        className={`flex items-center justify-start h-8 ${expanded ? "w-44" : "w-10"
+                            } gap-5 rounded-2xl transition-[width] duration-200 ${selected === "view"
+                                ? "bg-blue-100 text-blue-500 pl-2"
+                                : "text-gray-500 pl-2"
+                            }`}
+                    >
+                        <LuLayoutList className="text-2xl shrink-0" />
+                        {expanded && (
+                            <span
+                                className={`text-base font-bold ${selected === "view" ? "text-blue-500" : "text-gray-700"
+                                    }`}
+                            >
+                                View
+                            </span>
+                        )}
+                    </Link>
+
+                    {/* ACCOUNTS */}
+                    <Link
+                        href="/motrends"
+                        onClick={() => setSelected("accounts")}
+                        className={`flex items-center justify-start h-8 ${expanded ? "w-44" : "w-10"
+                            } gap-5 rounded-2xl transition-width duration-200 ${selected === "accounts"
+                                ? "bg-blue-100 text-blue-500 pl-2"
+                                : "text-gray-500 pl-2"
+                            }`}
+                    >
+                        <MdOutlinePeople className="text-2xl shrink-0" />
+                        {expanded && (
+                            <span
+                                className={`text-base font-bold ${selected === "accounts" ? "text-blue-500" : "text-gray-700"
+                                    }`}
+                            >
+                                Accounts
+                            </span>
+                        )}
+                    </Link>
                 </ul>
-                <ul className=" flex flex-col flex-5 gap-5">
-                    <li className="text-lg text-gray-500">
-                        <FaUniversity />
-                    </li>
-                    <li className="text-lg text-gray-500">
-                        <FaChartBar />
-                    </li>
+                {expanded && <span className=" text-sm text-gray-500 font-mono pl-3 transition-[width] duration-200">
+                    COMPANY
+                </span>}
+                <ul
+                    className={`flex flex-col flex-[4] gap-5 ${expanded ? "mt-0" : "mt-5"
+                        }`}
+                >
+                    {/* LIBRARY */}
+                    <Link
+                        href="/motrends"
+                        onClick={() => setSelected("library")}
+                        className={`mt-2 flex items-center justify-start h-8 ${expanded ? "w-44" : "w-10"
+                            } gap-5 rounded-2xl transition-[width] duration-200 ${selected === "library"
+                                ? "bg-blue-100 text-blue-500 pl-2"
+                                : "text-gray-500 pl-2"
+                            }`}
+                    >
+                        <FaUniversity className="text-2xl shrink-0" />
+                        {expanded && (
+                            <span
+                                className={`text-base font-bold ${selected === "library" ? "text-blue-500" : "text-gray-700"
+                                    }`}
+                            >
+                                Library
+                            </span>
+                        )}
+                    </Link>
+
+                    <Link
+                        href="/motrends"
+                        onClick={() => setSelected("configure")}
+                        className={` flex items-center justify-start h-8 ${expanded ? "w-44" : "w-10"
+                            } gap-5 rounded-2xl transition-[width] duration-200 ${selected === "configure"
+                                ? "bg-blue-100 text-blue-500 pl-3"
+                                : "text-gray-500 pl-3"
+                            }`}
+                    >
+                        <FaChartBar className="text-xl shrink-0" />
+                        {expanded && (
+                            <span
+                                className={`text-base font-bold ${selected === "configure" ? "text-blue-500" : "text-gray-700"
+                                    }`}
+                            >
+                                Configure
+                            </span>
+                        )}
+                    </Link>
                 </ul>
 
 
