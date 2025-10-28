@@ -7,7 +7,7 @@ import { FaRegBell } from "react-icons/fa";
 
 const Header = () => {
     return (
-        <header className="w-full bg-gray-50 border-b shadow-sm items-center justify-between flex sticky top-0 z-[20] mx-auto px-6 py-4 border-gray-200" >
+        <header className="w-full bg-white border-b shadow-sm items-center justify-between flex sticky top-0 z-[20] mx-auto px-6 py-4 border-gray-200" >
             {/* sticky header uptop to remake MoFlo Cloud application */}
             <Head />
             <div className='flex items-center gap-6'>
