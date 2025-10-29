@@ -10,20 +10,38 @@ const CreateDash: React.FC = () => {
     // dash with logic
     const [step, setStep] = useState(1); // steps for visual progress
     const [ready, setReady] = useState(false); // ready to allow to go next step
-
+    const [jsonData, setJSONData] = useState({
+        industry: '',
+        dataSources: [],
+        keywords: '',
+        trendType: 'current',
+        timeframe: '',
+        customNotes: '',
+    });
 
     return ( // make white dash, if sm-screen then put right component on bottom  
         <div className="bg-white shadow-sm rounded-lg">
             <div>
                 {/* visual bar, with steps */}
-                <VisualBar currentStep={step} />
+                <VisualBar
+                    currentStep={step}
+                    ready={ready}
+                />
                 {/* step component (always below visual), and change depending on step*/}
-                <Step isReady={setReady} currentStep={step} />
+                <Step
+                    isReadyAction={setReady}
+                    currentStep={step}
+                    jsonData={jsonData}
+                    setJSONDataAction={setJSONData}
+                />
                 {/* buttons */}
                 <div className="p-4 flex justify-end">
                     {step !== 1 && (
                         <button
-                            onClick={() => setStep(step - 1)}
+                            onClick={() => {
+                                setStep(step - 1);
+                                setReady(true);
+                            }}
                             className={"mr-auto bg-blue-600 font-bold text-white rounded-2xl "}
                         >
                             <div className="flex justify-between items-center text-sm gap-1 p-2 px-3">
@@ -34,9 +52,12 @@ const CreateDash: React.FC = () => {
                     {step !== 4 ?
                         (
                             <button
-                                onClick={() => setStep(step + 1)}
+                                onClick={() => {
+                                    setStep(step + 1);
+                                    setReady(false);
+                                }}
                                 disabled={!ready}
-                                className={` bg-gray-400 font-bold text-white rounded-2xl 
+                                className={` font-bold text-white rounded-2xl 
                                     ${ready
                                         ? "bg-blue-600"
                                         : "bg-gray-400"
@@ -49,7 +70,7 @@ const CreateDash: React.FC = () => {
                         : (
                             <button
                                 disabled={!ready}
-                                className={` bg-gray-400 font-bold text-white rounded-2xl 
+                                className={`font-bold text-white rounded-2xl 
                                     ${ready
                                         ? "bg-blue-600"
                                         : "bg-gray-400"

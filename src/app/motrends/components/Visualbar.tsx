@@ -5,16 +5,16 @@ import { LuDatabase } from "react-icons/lu";
 import { RiInputField, RiAiGenerate2 } from "react-icons/ri";
 import { IoMdCheckmark } from "react-icons/io";
 
-export default function VisualBar({ currentStep }: { currentStep: number }) {
+export default function VisualBar({ currentStep, ready }: { currentStep: number, ready: boolean }) {
     // ui for visualdash
     const steps = [ // for each step, have each icon & title
         { id: 1, icon: <FaRegBuilding />, title: "Industry" },
-        { id: 2, icon: <LuDatabase />, title: "Sources" },
-        { id: 3, icon: <RiInputField />, title: "Details" },
+        { id: 2, icon: <LuDatabase />, title: "Source" },
+        { id: 3, icon: <RiInputField />, title: "Detail" },
         { id: 4, icon: <RiAiGenerate2 />, title: "Preview" },
     ];
     return (
-        <div className="flex items-center justify-center py-8 px-4 ">
+        <div className="flex items-center justify-center py-8 px-6 ">
             {steps.map((step, index) => (
                 <div key={step.id} className="flex items-center justify-center">
                     {/* Format each circle, with:
@@ -52,7 +52,9 @@ export default function VisualBar({ currentStep }: { currentStep: number }) {
                             className={`relative w-[66px] h-[8px] rounded-full -ml-[6px] -mr-[6px] z-0 shadow-sm transition-all duration-500 ease-in-out
                                 ${currentStep > step.id
                                     ? "bg-blue-600"
-                                    : "bg-gray-300"
+                                    : currentStep === step.id && ready
+                                        ? "bg-blue-600"
+                                        : "bg-gray-300"
                                 }`}
                         ></div>
                     )}

@@ -1,4 +1,4 @@
-const View = () => {
+const View: React.FC = () => {
     return (
         <>
 
