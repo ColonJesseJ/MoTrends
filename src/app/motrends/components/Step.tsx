@@ -25,11 +25,11 @@ export default function Step({
 
                 <div className="mt-4 w-full max-w-2xl">
                     <button
-                        onClick={() => {
+                        onClick={() => { // set jsondata to all industries
                             setJSONDataAction({ ...jsonData, industry: 'All Industries' });
-                            isReadyAction(true);
+                            isReadyAction(true); // set ready
                         }}
-                        className={`font-bold rounded-lg p-3 px-6 w-full max-w mx-auto block transition-colors ${jsonData.industry === 'All Industries'
+                        className={`font-bold rounded-lg p-3 px-6 w-full max-w mx-auto block transition-colors ${jsonData.industry === 'All Industries' // if industry then blue, not gray
                             ? 'text-white hover:bg-blue-700 bg-blue-600'
                             : 'bg-gray-400 text-white hover:bg-gray-500'
                             }`}
@@ -39,13 +39,13 @@ export default function Step({
 
                     <div className="mt-4 grid grid-cols-2 gap-4">
                         {industries.filter((industry) => industry !== 'All Industries')
-                            .map((industry) => (
+                            .map((industry) => ( // iterate thru every industry thus filling out grid
                                 <button
                                     key={industry}
-                                    onClick={() => {
+                                    onClick={() => { // set json data and ready since selected
                                         setJSONDataAction({ ...jsonData, industry });
                                         isReadyAction(true);
-                                    }}
+                                    }} // if selected, then blue
                                     className={`font-bold rounded-lg p-3 px-6 w-full max-w mx-auto block transition-colors 
                                     ${jsonData.industry === industry ? 'bg-blue-600 text-white hover:bg-blue-700'
                                             : 'bg-gray-400 text-white hover:bg-gray-500'
@@ -62,18 +62,55 @@ export default function Step({
     // Sources Step
     if (currentStep == 2)
         return (
-            <div>
+            <div className="flex flex-col items-center px-4">
                 <h2 className="text-2xl flex font-extrabold justify-center">Sources</h2>
-            </div>
+                <div className=" mt-4 flex flex-col justify-center items-center w-full shadow-sm border-1 border-gray-300 rounded-xl max-w-2xl">
+                    <p className="m-5 text-sm font-bold">
+                        Choose which data sources to use
+                    </p>
+                    <div className=" mb-4 grid grid-cols-4 gap-4">
+                        {dataSources.map((source) => (
+                            <button
+                                key={source.value}
+                                onClick={() => {
+                                    const isAlreadySelected = jsonData.dataSources.includes(source.value);
+
+                                    if (isAlreadySelected) { // if already selected
+                                        // remove if selected again
+                                        const newSources = jsonData.dataSources.filter((s: string) => s !== source.value);
+                                        setJSONDataAction({ ...jsonData, dataSources: newSources });
+                                        // ready if at least 1
+                                        isReadyAction(newSources.length > 0);
+                                    } else { // not selected
+                                        // so add to array
+                                        const newSources = [...jsonData.dataSources, source.value];
+                                        setJSONDataAction({ ...jsonData, dataSources: newSources });
+
+                                        // ready since u def just selected one 
+                                        isReadyAction(true);
+                                    }
+                                }} // set those selected to blue
+                                className={`p-7 rounded-2xl text-2xl transition-colors
+                                    ${jsonData.dataSources?.includes(source.value)
+                                        ? "text-white bg-blue-600"
+                                        : "text-gray-500 bg-gray-300"
+                                    }`}
+                            >
+                                {source.icon}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+            </div >
         )
 
-    // Industry Step
+    // Details Step
     if (currentStep == 3)
         return (
             <h2 className="text-2xl flex font-extrabold justify-center">Details</h2>
         )
 
-    // Industry Step
+    // Preview Step
     if (currentStep == 4)
         return (
             <h2 className="text-2xl flex font-extrabold justify-center">Preview</h2>
