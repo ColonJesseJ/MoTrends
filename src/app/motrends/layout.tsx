@@ -3,14 +3,11 @@ import Sidebar from "./components/Sidebar"
 
 const MoLayout = ({ children }: { children: React.ReactNode }) => {
     return (
-        <div className="flex flex-col h-screen">
-            {/* Header at the top*/}
+        <div className="flex flex-col h-screen overflow-x-hidden">
             <Header />
-            <div className="flex flex-1 ">
-                {/* Sidebar right next to the main content*/}
+            <div className="flex flex-1 overflow-x-hidden">
                 <Sidebar />
-                {/* Main content next to sidebar*/}
-                <main className="flex flex-1 overflow-auto justify-center">
+                <main className="flex-1 overflow-y-auto overflow-x-hidden bg-[#FCFCFD]">
                     {children}
                 </main>
             </div>

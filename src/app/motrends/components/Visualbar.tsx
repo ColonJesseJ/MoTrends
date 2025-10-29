@@ -1,14 +1,65 @@
 'use client';
 
-import { useState } from "react";
-
+import { FaRegBuilding } from "react-icons/fa";
+import { LuDatabase } from "react-icons/lu";
+import { RiInputField, RiAiGenerate2 } from "react-icons/ri";
+import { IoMdCheckmark } from "react-icons/io";
 
 export default function VisualBar({ currentStep }: { currentStep: number }) {
     // ui for visualdash
+    const steps = [ // for each step, have each icon
+        { id: 1, icon: <FaRegBuilding />, title: "Industry" },
+        { id: 2, icon: <LuDatabase />, title: "Sources" },
+        { id: 3, icon: <RiInputField />, title: "Details" },
+        { id: 4, icon: <RiAiGenerate2 />, title: "Preview" },
+    ];
     return (
-        <>
+        <div className="flex items-center justify-center py-8 px-4 ">
+            {steps.map((step, index) => (
+                <div key={step.id} className="flex items-center justify-center">
+                    {/* Format each circle, with:
+                        light blue if on the step.
+                        dark blue if past the step,
+                        gray if havent reached yet
+                    */}
+                    <div className="flex flex-col items-center">
+                        <div className="text-sm text-gray-500 pb-1">
+                            Step {step.id}
+                        </div>
+                        <div className={`w-[55px] h-[55px] flex items-center justify-center rounded-full shrink-0 shadow-sm text-2xl text-white z-10
+                       
+                        ${currentStep === step.id
+                                ? "bg-blue-200"
+                                : currentStep > step.id
+                                    ? "bg-blue-600"
+                                    : "bg-gray-300"
+                            }`}
+                        >
+                            {/* Display icon if past, then checkmark*/}
+                            {currentStep > step.id ? (<IoMdCheckmark />) : step.icon}
+                        </div>
+                        <div>
+                            {step.title}
+                        </div>
+                    </div>
+                    {/* Line */}
+                    {index < steps.length - 1 && (
+                        <div
+                            className={`relative w-[66px] h-[8px] rounded-full -ml-[6px] -mr-[6px] z-0 shadow-sm transition-all duration-500 ease-in-out
+                                ${currentStep === step.id
+                                    ? "bg-blue-600"
+                                    : currentStep > step.id
+                                        ? "bg-blue-600"
+                                        : "bg-gray-300"
+                                }`}
+                        ></div>
+                    )}
 
-        </>
-    )
+
+                </div>
+            ))
+            }
+        </div >
+    );
 }
 

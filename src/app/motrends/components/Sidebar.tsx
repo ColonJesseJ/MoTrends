@@ -20,7 +20,7 @@ const Sidebar: React.FC = () => {
             onMouseEnter={() => setExpanded(true)} // when enter expand
             onMouseLeave={() => setExpanded(false)} // leave expand
         >
-            <nav className="h-full flex flex-col p-2">
+            <nav className="h-full flex flex-col p-3">
                 <Link
                     href="/"
                     className={`mt-6 mb-6 flex items-center justify-start h-8 ${expanded ? "w-44" : "w-10"
@@ -29,14 +29,14 @@ const Sidebar: React.FC = () => {
                     <IoIosArrowBack className="text-2xl shrink-0" />
                     {expanded && (
                         <span
-                            className={`text-base font-semibold text-gray-700 "}`}
+                            className={`text-base font-semibold text-gray-700 fade-in "}`}
                         >
                             Back
                         </span>
                     )}
                 </Link>
 
-                {expanded && <span className="text-sm text-gray-500 font-mono pl-3 transition-[width] duration-200">
+                {expanded && <span className="text-sm text-gray-500 font-mono pl-3 fade-in">
                     MOTRENDS
                 </span>}
                 <ul className={`flex flex-col flex-[2] gap-4 ${expanded ? "mt-0" : "mt-5"}`}
@@ -53,7 +53,7 @@ const Sidebar: React.FC = () => {
                         <MdOutlineDashboard className="text-2xl shrink-0" />
                         {expanded && (
                             <span
-                                className={`text-base font-bold ${onPath("/motrends") ? "text-blue-500" : "text-gray-700"
+                                className={`text-base font-bold fade-in ${onPath("/motrends") ? "text-blue-500" : "text-gray-700"
                                     }`}
                             >
                                 Dashboard
@@ -73,7 +73,7 @@ const Sidebar: React.FC = () => {
                         <PiNotePencilBold className="text-2xl shrink-0" />
                         {expanded && (
                             <span
-                                className={`text-base font-bold transition-[width] duration-300 ease-in-out 
+                                className={`text-base font-bold fade-in
                                 ${onPath("/motrends/create") ? "text-blue-500" : "text-gray-700"}`}
                             >
                                 Create
@@ -93,7 +93,8 @@ const Sidebar: React.FC = () => {
                         <LuLayoutList className="text-2xl shrink-0" />
                         {expanded && (
                             <span
-                                className={`text-base font-bold ${onPath("motrends/view") ? "text-blue-500" : "text-gray-700"
+                                className={`text-base font-bold fade-in 
+                                ${onPath("motrends/view") ? "text-blue-500" : "text-gray-700"
                                     }`}
                             >
                                 View
@@ -113,14 +114,16 @@ const Sidebar: React.FC = () => {
                         <MdOutlinePeople className="text-2xl shrink-0" />
                         {expanded && (
                             <span
-                                className={`text-base font-bold ${onPath("/motrends/accounts") ? "text-blue-500" : "text-gray-700"}`}
+                                className={`text-base font-bold fade-in
+                                    ${onPath("/motrends/accounts") ? "text-blue-500" : "text-gray-700"
+                                    }`}
                             >
                                 Accounts
                             </span>
                         )}
                     </Link>
                 </ul>
-                {expanded && <span className=" text-sm text-gray-500 font-mono pl-3 transition-[width] duration-200">
+                {expanded && <span className=" text-sm text-gray-500 font-mono pl-3 fade-in">
                     COMPANY
                 </span>}
                 <ul
@@ -137,7 +140,8 @@ const Sidebar: React.FC = () => {
                         <FaUniversity className="text-2xl shrink-0" />
                         {expanded && (
                             <span
-                                className={`text-base font-bold ${onPath("/motrends/library") ? "text-blue-500" : "text-gray-700"
+                                className={`text-base font-bold fade-in
+                                    ${onPath("/motrends/library") ? "text-blue-500" : "text-gray-700"
                                     }`}
                             >
                                 Library
@@ -156,7 +160,8 @@ const Sidebar: React.FC = () => {
                         <FaChartBar className="text-xl shrink-0" />
                         {expanded && (
                             <span
-                                className={`text-base font-bold ${onPath("motrends/configure") ? "text-blue-500" : "text-gray-700"
+                                className={`text-base font-bold fade-in
+                                    ${onPath("motrends/configure") ? "text-blue-500" : "text-gray-700"
                                     }`}
                             >
                                 Configure
