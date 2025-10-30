@@ -1,0 +1,21 @@
+## Questions
+
+1. What is the product’s name (your Mo-Something app)?
+    
+    MoTrends
+    
+2. What is the function + connection?
+    - Function: Trend generation
+    - Connection: Google Trends, X, LinkedIn, Reddit, TikTok hashtags
+
+3. Why did you choose to make the product?
+    
+    I was brainstorming in what really can provide a lot of value in this day of age. Recent businesses can generate exponential growth from social media on Tiktok and such. Then I realized that there is big reason why these business can grow so much. They take advantages of trends. With trends, comes more clicks, which can then bring out posts and products out way more to users. Having a product that generate current trends and even predict trends can provide so much outreach. It even directly connects to MoCloud’s other products providing much more value to MoFlo. 
+    
+4. Why would MoFlo clients (small and medium sized businesses) be interested in and/or use this product?
+    
+    SMBs can use MoTrends to provide so much value to their businesses by allowing them to take advantage of trends. Especially in smaller businesses, they might not have any research or marketing teams. Using MoTrends can provide trends to business without directly interacting with social media or manually searching. Companies can use current or predict trends to use market their product at an elevated rate. Creating content or advertising in relation with trends will increase visibility and engagement, just by taking advantage of timing. I’ve seen many examples of trends that are completely unrelated to a company or its products, yet businesses successfully leverage them to boost their outreach.
+    
+5. What would you improve or change about your new product if you had more time or could work on it in the future?
+
+    I would love to finish up all features of this challenge that were unfinished or if unpolished. Integrating real data fetching, fully integrating supabase, or even integrating real AI would be amazing as well. If I could change anything about the product, I would maybe brainstorm a more broad or change the product in a way to fit the business model. Although I believe this could be very beneficial, given the circumstances, I feel like it doesn’t enough fit the business model enough to be efficient enough product to be fully integrated. I do love my idea though, and I am happy that I chose it.
