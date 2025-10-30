@@ -5,11 +5,16 @@ import { useFormContext } from '../../context/FormContext';
 import Dropdown, { DropdownItem } from './Dropdown';
 import TextInput from './TextInput';
 import { industries, dataSources, timeframe, trendType } from '/Users/johan/moflo-app/src/app/motrends/data/options'
+import Generate from './Generate';
 
 export default function Step({
     currentStep,
+    generated,
+    setGeneratedAction
 }: {
     currentStep: number;
+    generated: boolean;
+    setGeneratedAction: (generated: boolean) => void;
 }) {
     const { jsonData, setJSONData } = useFormContext();  // new context
 
@@ -163,7 +168,7 @@ export default function Step({
                         Ready to generate!
                     </div>
                     <div className='text-sm font-semibold '>
-                        Review over you inputs before generating...
+                        Review over your inputs before generating...
                         <div className='mt-6 flex justify-center text-blue-600'>What you get after generating:</div>
                     </div>
                     <div className="my-1 p-4 flex justify-center items-center w-9/10 shadow-sm border-1 bg-blue-500 text-white rounded-xl text-xl max-w-xl"
@@ -177,13 +182,8 @@ export default function Step({
                     >Action ideas
                     </div>
                 </div >
-                <button
-                    className="my-2 flex flex-col justify-center items-center w-9/10 shadow-sm border-1 bg-blue-600 hover:bg-blue-700 rounded-xl max-w-xl"
-                >
-                    <p className="m-5 text-xl font-bold text-white ">
-                        Generate
-                    </p>
-                </button>
+                {/* GENERATE*/}
+                <Generate generated={generated} setGeneratedAction={setGeneratedAction} />
             </div >
 
         )

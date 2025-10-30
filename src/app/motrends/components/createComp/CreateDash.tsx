@@ -12,6 +12,7 @@ const CreateDash: React.FC = () => {
     // dash with logic
     const [step, setStep] = useState(1); // steps for visual progress
     const [ready, setReady] = useState(false); // ready to allow to go next step
+    const [generated, setGenerated] = useState(true);
 
     const { jsonData } = useFormContext();  // new context
 
@@ -45,6 +46,8 @@ const CreateDash: React.FC = () => {
                 {/* step component (always below visual), and change depending on step*/}
                 <Step
                     currentStep={step}
+                    generated={generated}
+                    setGeneratedAction={setGenerated}
                 />
                 {/* buttons */}
                 <div className="p-4 flex justify-end">
@@ -96,7 +99,7 @@ const CreateDash: React.FC = () => {
 
             </div>
             {/* seperate so output screen goes on the right side when not small*/}
-            <TrendPreview currentStep={step} />
+            <TrendPreview generated={generated} />
         </div >
     )
 }
