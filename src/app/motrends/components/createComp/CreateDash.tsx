@@ -12,7 +12,7 @@ const CreateDash: React.FC = () => {
     // dash with logic
     const [step, setStep] = useState(1); // steps for visual progress
     const [ready, setReady] = useState(false); // ready to allow to go next step
-    const [generated, setGenerated] = useState(true);
+    const [generated, setGenerated] = useState(false);
 
     const { jsonData } = useFormContext();  // new context
 
