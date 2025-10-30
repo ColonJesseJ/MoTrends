@@ -28,8 +28,8 @@ export const timeframe = [
 ]
 
 export const trendType = [
-    'current',
-    'predict'
+    'Current',
+    'Predicted'
 ]
 
 //keywords: '',

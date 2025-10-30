@@ -1,21 +1,17 @@
 "use client";
 
+import { useFormContext } from '../../context/FormContext';
 import Dropdown, { DropdownItem } from './Dropdown';
-import { industries, dataSources, timeframe } from '/Users/johan/moflo-app/src/app/motrends/data/options'
+import { industries, dataSources, timeframe, trendType } from '/Users/johan/moflo-app/src/app/motrends/data/options'
 
 export default function Step({
-    isReadyAction,
     currentStep,
-    jsonData,
-    setJSONDataAction,
     ready
 }: {
-    isReadyAction: (ready: boolean) => void;
     currentStep: number;
-    jsonData: any;
-    setJSONDataAction: (ready: any) => void;
     ready: boolean
 }) {
+    const { jsonData, setJSONData } = useFormContext();  // new context
 
     // Industry Step
     if (currentStep == 1)
@@ -29,8 +25,7 @@ export default function Step({
                 <div className="mt-4 w-full max-w-2xl">
                     <button
                         onClick={() => { // set jsondata to all industries
-                            setJSONDataAction({ ...jsonData, industry: 'All Industries' });
-                            isReadyAction(true); // set ready
+                            setJSONData({ ...jsonData, industry: 'All Industries' });
                         }}
                         className={`font-bold rounded-lg p-3 px-6 w-full max-w mx-auto block transition-colors ${jsonData.industry === 'All Industries' // if industry then blue, not gray
                             ? 'text-white hover:bg-blue-700 bg-blue-600'
@@ -46,8 +41,7 @@ export default function Step({
                                 <button
                                     key={industry}
                                     onClick={() => { // set json data and ready since selected
-                                        setJSONDataAction({ ...jsonData, industry });
-                                        isReadyAction(true);
+                                        setJSONData({ ...jsonData, industry });
                                     }} // if selected, then blue
                                     className={`font-bold rounded-lg p-3 px-6 w-full max-w mx-auto block transition-colors 
                                     ${jsonData.industry === industry ? 'bg-blue-600 text-white hover:bg-blue-700'
@@ -81,16 +75,11 @@ export default function Step({
                                     if (isAlreadySelected) { // if already selected
                                         // remove if selected again
                                         const newSources = jsonData.dataSources.filter((s: string) => s !== source.value);
-                                        setJSONDataAction({ ...jsonData, dataSources: newSources });
-                                        // ready if at least 1
-                                        isReadyAction(newSources.length > 0);
+                                        setJSONData({ ...jsonData, dataSources: newSources });
                                     } else { // not selected
                                         // so add to array
                                         const newSources = [...jsonData.dataSources, source.value];
-                                        setJSONDataAction({ ...jsonData, dataSources: newSources });
-
-                                        // ready since u def just selected one 
-                                        isReadyAction(true);
+                                        setJSONData({ ...jsonData, dataSources: newSources });
                                     }
                                 }} // set those selected to blue
                                 className={`p-7 rounded-2xl text-2xl transition-colors
@@ -117,10 +106,10 @@ export default function Step({
                 </p>
 
                 {/* Dropdowns for timeframe & current or predicted*/}
-                <div className='mt-2'>
+                <div className=" m-4 grid grid-cols-2 gap-4">
                     <Dropdown
-                        ready={ready}
-                        buttonText='Timeframe'
+                        buttonText={jsonData.timeframe || 'Timeframe'}
+                        selectedValue={jsonData.timeframe}
                         content={<> {
                             timeframe.map(time =>
                                 <DropdownItem
@@ -128,14 +117,31 @@ export default function Step({
                                     value={time}
                                     selectedValue={jsonData.timeframe}
                                     onClickAction={() => { // set jsondata to all industries
-                                        setJSONDataAction({ ...jsonData, timeframe: time });
-                                        isReadyAction(true); // set ready
+                                        setJSONData({ ...jsonData, timeframe: time });
                                     }}
                                 >
                                     {time}
                                 </DropdownItem>)
                         } </>}
                     />
+                    <Dropdown
+                        buttonText={jsonData.trendType || 'Trend Type'}
+                        selectedValue={jsonData.trendType}
+                        content={<> {
+                            trendType.map(type =>
+                                <DropdownItem
+                                    key={type}
+                                    value={type}
+                                    selectedValue={jsonData.trendType}
+                                    onClickAction={() => { // set jsondata to all industries
+                                        setJSONData({ ...jsonData, trendType: type });
+                                    }}
+                                >
+                                    {type}
+                                </DropdownItem>)
+                        } </>}
+                    />
+
                 </div>
             </div>
         )

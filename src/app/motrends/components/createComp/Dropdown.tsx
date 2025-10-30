@@ -6,11 +6,12 @@ import { useFormContext } from "../../context/FormContext";
 
 
 export default function Dropdown({
-    buttonText, content, ready
+    buttonText, content, selectedValue
 }: {
     buttonText: string;
     content: React.ReactNode;
-    ready: boolean
+    selectedValue: string;
+
 }) {
     const [open, setOpen] = useState(false);
 
@@ -19,6 +20,8 @@ export default function Dropdown({
     const toggleDropdown = () => {
         setOpen((open) => !open);
     }
+
+    const isSelected = !!selectedValue
 
     useEffect(() => {
         const handler = (event: MouseEvent) => {
@@ -42,7 +45,7 @@ export default function Dropdown({
             <DropdownBtn
                 toggleAction={toggleDropdown}
                 open={open}
-                ready={ready}
+                isSelected={isSelected}
             >
                 {buttonText}
             </DropdownBtn>
@@ -58,22 +61,22 @@ export function DropdownBtn({
     children,
     open,
     toggleAction,
-    ready
+    isSelected
 }: {
     children: React.ReactNode;
     open: boolean;
     toggleAction: () => void;
-    ready: boolean
+    isSelected: boolean;
 }) {
     return (
         <div onClick={toggleAction}
-            className={`flex items-center font-bold rounded-lg p-2 w-fit 
-            ${ready
+            className={`flex items-center justify-center font-bold rounded-lg p-2 w-50
+            ${isSelected
                     ? "bg-blue-600 hover:bg-blue-700"
                     : "bg-gray-400 hover:bg-gray-500"}
             transition-colors text-white  cursor-pointer gap-2 
                 ${open
-                    ? "border-2 border-black"
+                    ? " border-black"
                     : null
                 }`}
         >

@@ -2,7 +2,7 @@
 
 import VisualBar from "./Visualbar";
 import Step from "./Step";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { LuSave } from "react-icons/lu";
 import { useFormContext } from "../../context/FormContext";
@@ -14,6 +14,24 @@ const CreateDash: React.FC = () => {
 
     const { jsonData, setJSONData } = useFormContext();  // new context
 
+    useEffect(() => { // use efefct t check if all data has been filled instead
+        switch (step) {
+            case 1: // step 1
+                setReady(!!jsonData.industry) // if it has industry
+                break;
+            case 2: // step 2
+                setReady(jsonData.dataSources.length > 0) // 1 or more is selected
+                break;
+            case 3: // step 3 
+                setReady(!!jsonData.timeframe && // check if each is selected
+                    !!jsonData.trendType)
+                break;
+            case 4: // step 4, checks all?
+                break;
+        }
+
+    }, [step, jsonData])
+
     return ( // make white dash, if sm-screen then put right component on bottom  
         <div className="bg-white shadow-sm rounded-lg">
             <div>
@@ -24,10 +42,7 @@ const CreateDash: React.FC = () => {
                 />
                 {/* step component (always below visual), and change depending on step*/}
                 <Step
-                    isReadyAction={setReady}
                     currentStep={step}
-                    jsonData={jsonData}
-                    setJSONDataAction={setJSONData}
                     ready={ready}
                 />
                 {/* buttons */}
