@@ -14,7 +14,7 @@ export default function VisualBar({ currentStep, ready }: { currentStep: number,
         { id: 4, icon: <RiAiGenerate2 />, title: "Preview" },
     ];
     return (
-        <div className="flex items-center justify-center py-8 px-6 ">
+        <div className="flex items-center justify-center py-4 px-6 ">
             {steps.map((step, index) => (
                 <div key={step.id} className="flex items-center justify-center">
                     {/* Format each circle, with:

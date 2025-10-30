@@ -1,15 +1,15 @@
 "use client";
 
+import { json } from 'stream/consumers';
 import { useFormContext } from '../../context/FormContext';
 import Dropdown, { DropdownItem } from './Dropdown';
+import TextInput from './TextInput';
 import { industries, dataSources, timeframe, trendType } from '/Users/johan/moflo-app/src/app/motrends/data/options'
 
 export default function Step({
     currentStep,
-    ready
 }: {
     currentStep: number;
-    ready: boolean
 }) {
     const { jsonData, setJSONData } = useFormContext();  // new context
 
@@ -102,11 +102,11 @@ export default function Step({
             <div className="flex flex-col items-center px-4">
                 <h2 className="text-2xl flex font-extrabold justify-center">Details</h2>
                 <p className="mt-2 text-sm font-bold">
-                    Select the following details
+                    Fill out the following details
                 </p>
 
                 {/* Dropdowns for timeframe & current or predicted*/}
-                <div className=" m-4 grid grid-cols-2 gap-4">
+                <div className=" my-3 grid grid-cols-2 gap-4">
                     <Dropdown
                         buttonText={jsonData.timeframe || 'Timeframe'}
                         selectedValue={jsonData.timeframe}
@@ -143,13 +143,49 @@ export default function Step({
                     />
 
                 </div>
+                {/* Text input for keywords */}
+                <div>
+                    <p className='flex justify-center text-sm font-semibold'>Input keywords (seperate with commas)</p>
+                    <TextInput />
+                </div>
+
+                {/* custom notes like the chatgpt moflo  */}
             </div>
         )
 
     // Preview Step
     if (currentStep == 4)
         return (
-            <h2 className="text-2xl flex font-extrabold justify-center">Preview</h2>
+            <div className='flex flex-col items-center'>
+                <h2 className="text-2xl flex font-extrabold justify-center">Preview</h2>
+                <div className=" my-3 flex flex-col justify-center items-center w-9/10 shadow-sm border-1 border-gray-300 rounded-xl max-w-xl">
+                    <div className="mt-3 text-lg font-extrabold flex items-center flex-col">
+                        Ready to generate!
+                    </div>
+                    <div className='text-sm font-semibold '>
+                        Review over you inputs before generating...
+                        <div className='mt-6 flex justify-center text-blue-600'>What you get after generating:</div>
+                    </div>
+                    <div className="my-1 p-4 flex justify-center items-center w-9/10 shadow-sm border-1 bg-blue-500 text-white rounded-xl text-xl max-w-xl"
+                    > <h1 className='font-extrabold'>AI</h1>
+                        -powered Trends
+                    </div>
+                    <div className="my-1 p-4 flex flex-col justify-center items-center w-9/10 shadow-sm border-1 bg-blue-500 text-white rounded-xl text-lg max-w-xl"
+                    >Engagement Score
+                    </div>
+                    <div className="my-1 mb-4 p-4 flex flex-col justify-center items-center w-9/10 shadow-sm border-1 bg-blue-500 text-white rounded-xl text-lg max-w-xl"
+                    >Action ideas
+                    </div>
+                </div >
+                <button
+                    className="my-2 flex flex-col justify-center items-center w-9/10 shadow-sm border-1 bg-blue-600 hover:bg-blue-700 rounded-xl max-w-xl"
+                >
+                    <p className="m-5 text-xl font-bold text-white ">
+                        Generate
+                    </p>
+                </button>
+            </div >
+
         )
 
 
