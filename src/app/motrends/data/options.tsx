@@ -18,6 +18,21 @@ export const dataSources = [
     { name: 'Tiktok', value: 'tk', icon: <FaTiktok /> },
     { name: 'Facebook', value: 'fb', icon: <FaFacebook /> },
     { name: 'LinkedIn', value: 'li', icon: <FaLinkedin /> }
-
 ]
 
+export const timeframe = [
+    'Short-term',
+    'Seasonal',
+    'Mid-term',
+    'Long-term'
+]
+
+export const trendType = [
+    'current',
+    'predict'
+]
+
+//keywords: '',
+//      trendType: 'current',
+//    timeframe: '',
+//  customNotes: '',

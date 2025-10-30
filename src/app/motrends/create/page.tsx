@@ -1,4 +1,4 @@
-import CreateDash from "../components/CreateDash";
+import CreateDash from "../components/createComp/CreateDash";
 
 const Create: React.FC = () => {
 

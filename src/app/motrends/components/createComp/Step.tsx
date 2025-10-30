@@ -1,6 +1,7 @@
 "use client";
 
-import { industries, dataSources } from "../data/options"
+import Dropdown, { DropdownItem } from './Dropdown';
+import { industries, dataSources, timeframe } from '/Users/johan/moflo-app/src/app/motrends/data/options'
 
 export default function Step({
     isReadyAction,
@@ -9,7 +10,7 @@ export default function Step({
     setJSONDataAction
 }: {
     isReadyAction: (ready: boolean) => void;
-    currentStep: number
+    currentStep: number;
     jsonData: any;
     setJSONDataAction: (ready: any) => void;
 }) {
@@ -107,7 +108,31 @@ export default function Step({
     // Details Step
     if (currentStep == 3)
         return (
-            <h2 className="text-2xl flex font-extrabold justify-center">Details</h2>
+            <div className="flex flex-col items-center px-4">
+                <h2 className="text-2xl flex font-extrabold justify-center">Details</h2>
+                <p className="mt-2 text-sm font-bold">
+                    Select the following details
+                </p>
+
+                {/* Dropdowns for timeframe & current or predicted*/}
+                <div className='mt-2'>
+                    <Dropdown
+                        buttonText='Timeframe'
+                        content={<> {
+                            timeframe.map(time =>
+                                <DropdownItem
+                                    key={time}
+                                    onClickAction={() => { // set jsondata to all industries
+                                        setJSONDataAction({ ...jsonData, timeframe: time });
+                                        isReadyAction(true); // set ready
+                                    }}
+                                >
+                                    {time}
+                                </DropdownItem>)
+                        } </>}
+                    />
+                </div>
+            </div>
         )
 
     // Preview Step
