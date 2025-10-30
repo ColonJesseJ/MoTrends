@@ -21,7 +21,7 @@ export default function TextInput() {
                     }`}
                 onChange={(e) => setValue(e.target.value)} // change text
                 onBlur={() => setJSONData({ ...jsonData, keywords: value })} // save when exit
-                placeholder="                   keyword, keyword, etc"
+                placeholder="             keyword, keyword, keyword"
                 required
             />
 

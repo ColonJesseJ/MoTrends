@@ -50,10 +50,11 @@ Create (/motrends/create)
 - Choose details (to add more context to your generation)
     - Dynamic dropdown component for input
     - Text input
-- All selections are dynamically being added to json for eventual generation and saved to database
+- All selections are dynamically being added to json (using context) for eventual generation and saved to database 
 - Trend Preview which dynamically appears as inputs are being enterd, as well formatted for mobile and fullscreen
 - Generation button, which would generate trends, engagement score, & actions based on inputs
 - Save button which would then save json to database
+- Lots of instances of UX design with hover and selected
 
 
 View (/motrends/view)

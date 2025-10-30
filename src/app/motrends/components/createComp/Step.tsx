@@ -6,14 +6,15 @@ import Dropdown, { DropdownItem } from './Dropdown';
 import TextInput from './TextInput';
 import { industries, dataSources, timeframe, trendType } from '/Users/johan/moflo-app/src/app/motrends/data/options'
 import Generate from './Generate';
+import { Trend } from '../../types/Trend';
 
 export default function Step({
     currentStep,
-    generated,
+    setTrendsAction,
     setGeneratedAction
 }: {
     currentStep: number;
-    generated: boolean;
+    setTrendsAction: (trends: Trend[]) => void;
     setGeneratedAction: (generated: boolean) => void;
 }) {
     const { jsonData, setJSONData } = useFormContext();  // new context
@@ -150,7 +151,7 @@ export default function Step({
                 </div>
                 {/* Text input for keywords */}
                 <div>
-                    <p className='flex justify-center text-sm font-semibold'>Input keywords (seperate with commas)</p>
+                    <p className='flex justify-center text-sm font-semibold'>Input 3 keywords (seperate with commas)</p>
                     <TextInput />
                 </div>
 
@@ -183,7 +184,7 @@ export default function Step({
                     </div>
                 </div >
                 {/* GENERATE*/}
-                <Generate generated={generated} setGeneratedAction={setGeneratedAction} />
+                <Generate setGeneratedAction={setGeneratedAction} setTrendsAction={setTrendsAction} />
             </div >
 
         )

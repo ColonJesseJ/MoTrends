@@ -14,10 +14,10 @@ export const industries = [
 ]
 
 export const dataSources = [
-    { name: 'Google Trends', value: 'google', icon: <FaGoogle /> },
-    { name: 'Tiktok', value: 'tk', icon: <FaTiktok /> },
-    { name: 'Facebook', value: 'fb', icon: <FaFacebook /> },
-    { name: 'LinkedIn', value: 'li', icon: <FaLinkedin /> }
+    { name: 'Google Trends', value: 'Google Trends', icon: <FaGoogle /> },
+    { name: 'Tiktok', value: 'Tiktok', icon: <FaTiktok /> },
+    { name: 'Facebook', value: 'Facebook', icon: <FaFacebook /> },
+    { name: 'LinkedIn', value: 'LinkedIn', icon: <FaLinkedin /> }
 ]
 
 export const timeframe = [
