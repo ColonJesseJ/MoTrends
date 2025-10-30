@@ -7,12 +7,14 @@ export default function Step({
     isReadyAction,
     currentStep,
     jsonData,
-    setJSONDataAction
+    setJSONDataAction,
+    ready
 }: {
     isReadyAction: (ready: boolean) => void;
     currentStep: number;
     jsonData: any;
     setJSONDataAction: (ready: any) => void;
+    ready: boolean
 }) {
 
     // Industry Step
@@ -117,11 +119,14 @@ export default function Step({
                 {/* Dropdowns for timeframe & current or predicted*/}
                 <div className='mt-2'>
                     <Dropdown
+                        ready={ready}
                         buttonText='Timeframe'
                         content={<> {
                             timeframe.map(time =>
                                 <DropdownItem
                                     key={time}
+                                    value={time}
+                                    selectedValue={jsonData.timeframe}
                                     onClickAction={() => { // set jsondata to all industries
                                         setJSONDataAction({ ...jsonData, timeframe: time });
                                         isReadyAction(true); // set ready

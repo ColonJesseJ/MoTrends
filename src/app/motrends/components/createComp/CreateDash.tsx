@@ -5,19 +5,14 @@ import Step from "./Step";
 import { useState } from "react";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { LuSave } from "react-icons/lu";
+import { useFormContext } from "../../context/FormContext";
 
 const CreateDash: React.FC = () => {
     // dash with logic
     const [step, setStep] = useState(1); // steps for visual progress
     const [ready, setReady] = useState(false); // ready to allow to go next step
-    const [jsonData, setJSONData] = useState({
-        industry: '',
-        dataSources: [],
-        keywords: '',
-        trendType: 'current',
-        timeframe: '',
-        customNotes: '',
-    });
+
+    const { jsonData, setJSONData } = useFormContext();  // new context
 
     return ( // make white dash, if sm-screen then put right component on bottom  
         <div className="bg-white shadow-sm rounded-lg">
@@ -33,6 +28,7 @@ const CreateDash: React.FC = () => {
                     currentStep={step}
                     jsonData={jsonData}
                     setJSONDataAction={setJSONData}
+                    ready={ready}
                 />
                 {/* buttons */}
                 <div className="p-4 flex justify-end">

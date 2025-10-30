@@ -2,13 +2,15 @@
 
 import { useEffect, useRef, useState } from "react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io"
+import { useFormContext } from "../../context/FormContext";
 
 
 export default function Dropdown({
-    buttonText, content
+    buttonText, content, ready
 }: {
     buttonText: string;
     content: React.ReactNode;
+    ready: boolean
 }) {
     const [open, setOpen] = useState(false);
 
@@ -26,18 +28,22 @@ export default function Dropdown({
             }
         };
 
-        document.addEventListener("click", handler)
-
-        return () => {
-            document.removeEventListener
-                ("click", handler);
+        if (open) {
+            document.addEventListener("click", handler);
         }
 
-    }, [])
+        return () => {
+            document.removeEventListener("click", handler);
+        };
+    }, [open])
 
     return (
         <div className="relative" ref={dropdownRef}>
-            <DropdownBtn toggleAction={toggleDropdown} open={open}>
+            <DropdownBtn
+                toggleAction={toggleDropdown}
+                open={open}
+                ready={ready}
+            >
                 {buttonText}
             </DropdownBtn>
             <DropdownContent open={open}>
@@ -51,17 +57,23 @@ export default function Dropdown({
 export function DropdownBtn({
     children,
     open,
-    toggleAction
+    toggleAction,
+    ready
 }: {
     children: React.ReactNode;
     open: boolean;
     toggleAction: () => void;
+    ready: boolean
 }) {
     return (
         <div onClick={toggleAction}
-            className={`flex items-center font-bold rounded-lg p-2 w-fit transition-colors bg-gray-400 text-white hover:bg-gray-500 cursor-pointer gap-2 
+            className={`flex items-center font-bold rounded-lg p-2 w-fit 
+            ${ready
+                    ? "bg-blue-600 hover:bg-blue-700"
+                    : "bg-gray-400 hover:bg-gray-500"}
+            transition-colors text-white  cursor-pointer gap-2 
                 ${open
-                    ? "border-2 border-gray-500"
+                    ? "border-2 border-black"
                     : null
                 }`}
         >
@@ -100,18 +112,25 @@ export function DropdownContent({
 
 export function DropdownItem({
     children,
+    value,
+    selectedValue,
     onClickAction
 }: {
     children: React.ReactNode;
+    value: string
+    selectedValue: string
     onClickAction: () => void;
 }) {
     return (
         <div
-            className="p-[0.5rem] m-[0.1rem] w-full flex justify-center cursor-pointer font-bold text-white hover:bg-gray-500 rounded-lg"
+            className={`p-[0.5rem] m-[0.1rem] w-full flex justify-center cursor-pointer font-bold text-white rounded-lg transition-colors
+                ${selectedValue === value
+                    ? "bg-blue-600 hover:bg-blue-700"
+                    : "bg-gray-400 hover:bg-gray-500"
+                }`}
             onClick={onClickAction}
         >
             {children}
-        </div>
-    )
+        </div>)
 
 }
