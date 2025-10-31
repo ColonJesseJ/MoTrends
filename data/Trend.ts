@@ -1,3 +1,5 @@
+// EXAMPLE SCHEMA
+
 export interface Trend {
     // info when created
     id: string;

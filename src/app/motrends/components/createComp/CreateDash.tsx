@@ -7,7 +7,7 @@ import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { LuSave } from "react-icons/lu";
 import { useFormContext } from "../../context/FormContext";
 import TrendPreview from "./TrendPreview";
-import { Trend } from "../../types/Trend";
+import { Trend } from "../../../../../data/Trend";
 import { useRouter } from "next/navigation";
 
 const CreateDash: React.FC = () => {
