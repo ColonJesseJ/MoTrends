@@ -6,7 +6,7 @@ import Dropdown, { DropdownItem } from './Dropdown';
 import TextInput from './TextInput';
 import { industries, dataSources, timeframe, trendType } from '/Users/johan/moflo-app/src/app/motrends/data/options'
 import Generate from './Generate';
-import { Trend } from '../../types/Trend';
+import { Trend } from "../../../../../data/Trend";
 
 export default function Step({
     currentStep,

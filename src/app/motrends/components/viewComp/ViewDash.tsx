@@ -7,36 +7,35 @@ export default function ViewDash() {
     const [view, setView] = useState<'list' | 'grid'>('list')
 
     return (
-        <div className="flex flex-col w-full items-end">
-            {/* Toggle pill */}
-            <div className="flex m-4 rounded-full border border-black overflow-hidden shadow-sm">
-                <button
-                    onClick={() => setView('list')}
-                    className={`px-5 py-2 text-sm font-semibold transition-all 
-                    ${view === 'list'
-                            ? 'bg-blue-600'
-                            : 'bg-blue-300 hover:bg-blue-400'
-                        }`}
-                >
-                    List
-                </button>
+        <div className="w-full mt-6">
+            <div className="flex flex-col mx-10">
+                <div className="flex rounded-full border w-33 ml-auto  border-black overflow-hidden shadow-md">
+                    <button
+                        onClick={() => setView('list')}
+                        className={`px-5 py-2 text-sm font-semibold transition-all ${view === 'list'
+                            ? 'bg-blue-600 text-white'
+                            : 'bg-blue-300 hover:bg-blue-400 text-black'
+                            }`}
+                    >
+                        List
+                    </button>
 
-                <button
-                    onClick={() => setView('grid')}
-                    className={`px-5 py-2 text-sm font-semibold transition-all 
-                    ${view === 'grid'
-                            ? 'bg-blue-600 '
-                            : 'bg-blue-300 hover:bg-blue-400'
-                        }`}
-                >
-                    Grid
-                </button>
-            </div>
+                    <button
+                        onClick={() => setView('grid')}
+                        className={`px-5 py-2 text-sm font-semibold transition-all ${view === 'grid'
+                            ? 'bg-blue-600 text-white'
+                            : 'bg-blue-300 hover:bg-blue-400 text-black'
+                            }`}
+                    >
+                        Grid
+                    </button>
+                </div>
 
-            {/* View section */}
-            <div className="w-full mt-6">
-                {view === 'list' ? <List /> : <Grid />}
+                <div className="w-full">
+                    {view === 'list' ? <List /> : <Grid />}
+                </div>
             </div>
         </div>
     )
 }
+

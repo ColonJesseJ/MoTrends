@@ -793,5 +793,89 @@
       "Track adoption timelines quarterly",
       "Curate a long-term innovation roadmap"
     ]
+  },
+  {
+    "id": "trend_1761892429167",
+    "createdAt": "2025-10-31T06:33:49.167Z",
+    "status": "active",
+    "industry": "All Industries",
+    "dataSources": [
+      "Tiktok",
+      "Google Trends",
+      "LinkedIn"
+    ],
+    "keywords": [
+      "halloween",
+      "tech",
+      "snowboarding"
+    ],
+    "trendType": "Predicted",
+    "timeframe": "Mid-term",
+    "title": "halloween Revolution in All Industries",
+    "engagementScore": 94,
+    "prediction": "Based on Tiktok, Google Trends, LinkedIn, \"halloween\" shows explosive 300% YoY growth in All Industries. Early investment critical for mid-term.",
+    "actionItems": [
+      "Launch premium halloween offering immediately",
+      "Invest 40% of budget into Tiktok campaigns",
+      "Build partnerships with industry leaders",
+      "Position as thought leader with webinar series",
+      "Hire dedicated team to capture opportunity"
+    ]
+  },
+  {
+    "id": "trend_1761892429167_medium",
+    "createdAt": "2025-10-31T06:33:50.167Z",
+    "status": "active",
+    "industry": "All Industries",
+    "dataSources": [
+      "Tiktok",
+      "Google Trends",
+      "LinkedIn"
+    ],
+    "keywords": [
+      "halloween",
+      "tech",
+      "snowboarding"
+    ],
+    "trendType": "Predicted",
+    "timeframe": "Mid-term",
+    "title": "halloween Integration in All Industries",
+    "engagementScore": 66,
+    "prediction": "Based on Tiktok, Google Trends, LinkedIn, \"halloween\" shows steady 45% growth in All Industries. Pilot programs recommended for mid-term.",
+    "actionItems": [
+      "Launch beta halloween features with select customers",
+      "Monitor Tiktok weekly for shifts",
+      "Create educational content series",
+      "Allocate 20% of budget for testing",
+      "Survey customers quarterly about interest"
+    ]
+  },
+  {
+    "id": "trend_1761892429167_low",
+    "createdAt": "2025-10-31T06:33:51.167Z",
+    "status": "active",
+    "industry": "All Industries",
+    "dataSources": [
+      "Tiktok",
+      "Google Trends",
+      "LinkedIn"
+    ],
+    "keywords": [
+      "halloween",
+      "tech",
+      "snowboarding"
+    ],
+    "trendType": "Predicted",
+    "timeframe": "Mid-term",
+    "title": "halloween Awareness in All Industries",
+    "engagementScore": 58,
+    "prediction": "Based on Tiktok, Google Trends, LinkedIn, \"halloween\" shows 15% interest in All Industries. Watch-and-learn approach for mid-term.",
+    "actionItems": [
+      "Subscribe to halloween newsletters",
+      "Attend industry webinars",
+      "Run small $500 test on Tiktok",
+      "Set aside 5% exploration budget",
+      "Document competitor strategies"
+    ]
   }
 ]

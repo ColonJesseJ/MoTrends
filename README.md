@@ -41,7 +41,10 @@ Layout
 
 
 Dashboard (/motrends/)
-
+- Title card
+- Buttons to instantly start
+- Cards using json information
+    - such as # of trends generated, and most recent information
 
 Create (/motrends/create)
 - Visual bar, a perfect copy of MoSocial's create
@@ -53,19 +56,26 @@ Create (/motrends/create)
 - All selections are dynamically being added to json (using context) for eventual generation and saved to database 
 - Trend Preview which dynamically appears as inputs are being enterd, as well formatted for mobile and fullscreen
 - Generation button, which would generate trends, engagement score, & actions based on inputs
-- Save button which would then save json to database
+- Save button which would then save json to txt file using POST
 - Lots of instances of UX design with hover and selected
 
 
 View (/motrends/view)
-
+- Visual data being display that was saved from /create
+- Uses GET to get data from txt file
+- Button to choose between list or grid
+- List for quick view of trends
+- Grid displays full view of most information
+- Delete button which deletes its it from txt file using POST
 
 ## D
 
 Assumptions
 - AI is simulated with placeholder information
+- There is placeholder data
 
 Limitations
-- No actual data fetching from data sources
 - Client-side
 - Local storage
+- Only create page adjusted for mobile
+- Unfinished edit button
