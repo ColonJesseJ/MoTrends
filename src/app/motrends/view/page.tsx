@@ -1,8 +1,10 @@
-const View: React.FC = () => {
+import List from "../components/viewComp/List";
+
+export default function Page() {
+
     return (
         <>
-
+            <List />
         </>
     )
 }
-export default View;

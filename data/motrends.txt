@@ -1,0 +1,797 @@
+[
+  {
+    "id": "trend_1761900000000_0",
+    "createdAt": "2025-10-31T02:01:30.724525",
+    "status": "active",
+    "industry": "Health",
+    "dataSources": [
+      "Facebook",
+      "LinkedIn"
+    ],
+    "keywords": [
+      "AI Diagnostics",
+      "Wellness",
+      "Longevity"
+    ],
+    "trendType": "Predicted",
+    "timeframe": "Short-term",
+    "title": "Emerging Momentum in Health",
+    "engagementScore": 93,
+    "prediction": "Based on Facebook, LinkedIn, interest around emerging topics like AI Diagnostics, Wellness is surging. Early adopters are already leveraging data-driven insight.",
+    "actionItems": [
+      "Host cross-industry panels on innovation",
+      "Invest in agile transformation strategies",
+      "Engage communities with interactive campaigns",
+      "Leverage AI-driven social analytics",
+      "Expand presence across emerging digital platforms"
+    ]
+  },
+  {
+    "id": "trend_1761900000000_1",
+    "createdAt": "2025-10-31T02:01:30.724550",
+    "status": "active",
+    "industry": "Health",
+    "dataSources": [
+      "Facebook",
+      "LinkedIn"
+    ],
+    "keywords": [
+      "AI Diagnostics",
+      "Wellness",
+      "Longevity"
+    ],
+    "trendType": "Predicted",
+    "timeframe": "Short-term",
+    "title": "Next-Gen Shifts Transforming Health",
+    "engagementScore": 55,
+    "prediction": "Recent data from Facebook, LinkedIn reveals evolving interest across sectors, as companies merge creativity with analytics. Early adopters are already leveraging data-driven insight.",
+    "actionItems": [
+      "Deploy pilot programs with measurable outcomes",
+      "Adopt transparent reporting to attract partners",
+      "Integrate trend forecasting into product design",
+      "Collaborate with influencers and educators",
+      "Refine audience segmentation using engagement metrics"
+    ]
+  },
+  {
+    "id": "trend_1761900000000_2",
+    "createdAt": "2025-10-31T02:01:30.724553",
+    "status": "active",
+    "industry": "Health",
+    "dataSources": [
+      "Facebook",
+      "LinkedIn"
+    ],
+    "keywords": [
+      "AI Diagnostics",
+      "Wellness",
+      "Longevity"
+    ],
+    "trendType": "Predicted",
+    "timeframe": "Short-term",
+    "title": "How Health is Adapting to Rapid Change",
+    "engagementScore": 43,
+    "prediction": "Social and trend signals suggest that Health is entering a new era of adaptive innovation. The narrative across industries points to a paradigm shift.",
+    "actionItems": [
+      "Research behavioral data to anticipate shifts",
+      "Join research consortiums or open-source alliances",
+      "Encourage internal creativity workshops",
+      "Track adoption timelines quarterly",
+      "Curate a long-term innovation roadmap"
+    ]
+  },
+  {
+    "id": "trend_1761900000001_0",
+    "createdAt": "2025-10-31T02:01:30.724586",
+    "status": "active",
+    "industry": "Science",
+    "dataSources": [
+      "Tiktok",
+      "Google Trends"
+    ],
+    "keywords": [
+      "Biotech",
+      "Fusion Energy",
+      "Nanotech"
+    ],
+    "trendType": "Current",
+    "timeframe": "Short-term",
+    "title": "Emerging Momentum in Science",
+    "engagementScore": 88,
+    "prediction": "Based on Tiktok, Google Trends, interest around emerging topics like Biotech, Fusion Energy is surging. Technological acceleration continues to reshape operations.",
+    "actionItems": [
+      "Host cross-industry panels on innovation",
+      "Invest in agile transformation strategies",
+      "Engage communities with interactive campaigns",
+      "Leverage AI-driven social analytics",
+      "Expand presence across emerging digital platforms"
+    ]
+  },
+  {
+    "id": "trend_1761900000001_1",
+    "createdAt": "2025-10-31T02:01:30.724593",
+    "status": "active",
+    "industry": "Science",
+    "dataSources": [
+      "Tiktok",
+      "Google Trends"
+    ],
+    "keywords": [
+      "Biotech",
+      "Fusion Energy",
+      "Nanotech"
+    ],
+    "trendType": "Current",
+    "timeframe": "Short-term",
+    "title": "Next-Gen Shifts Transforming Science",
+    "engagementScore": 61,
+    "prediction": "Recent data from Tiktok, Google Trends reveals evolving interest across sectors, as companies merge creativity with analytics. Technological acceleration continues to reshape operations.",
+    "actionItems": [
+      "Deploy pilot programs with measurable outcomes",
+      "Adopt transparent reporting to attract partners",
+      "Integrate trend forecasting into product design",
+      "Collaborate with influencers and educators",
+      "Refine audience segmentation using engagement metrics"
+    ]
+  },
+  {
+    "id": "trend_1761900000001_2",
+    "createdAt": "2025-10-31T02:01:30.724598",
+    "status": "active",
+    "industry": "Science",
+    "dataSources": [
+      "Tiktok",
+      "Google Trends"
+    ],
+    "keywords": [
+      "Biotech",
+      "Fusion Energy",
+      "Nanotech"
+    ],
+    "trendType": "Current",
+    "timeframe": "Short-term",
+    "title": "How Science is Adapting to Rapid Change",
+    "engagementScore": 42,
+    "prediction": "Social and trend signals suggest that Science is entering a new era of adaptive innovation. The narrative across industries points to a paradigm shift.",
+    "actionItems": [
+      "Research behavioral data to anticipate shifts",
+      "Join research consortiums or open-source alliances",
+      "Encourage internal creativity workshops",
+      "Track adoption timelines quarterly",
+      "Curate a long-term innovation roadmap"
+    ]
+  },
+  {
+    "id": "trend_1761900000002_0",
+    "createdAt": "2025-10-31T02:01:30.724633",
+    "status": "active",
+    "industry": "Entertainment",
+    "dataSources": [
+      "Facebook",
+      "LinkedIn"
+    ],
+    "keywords": [
+      "Gaming",
+      "AI Music",
+      "Virtual Concerts"
+    ],
+    "trendType": "Predicted",
+    "timeframe": "Short-term",
+    "title": "Emerging Momentum in Entertainment",
+    "engagementScore": 93,
+    "prediction": "Based on Facebook, LinkedIn, interest around emerging topics like Gaming, AI Music is surging. Long-term indicators point toward structural transformation.",
+    "actionItems": [
+      "Host cross-industry panels on innovation",
+      "Invest in agile transformation strategies",
+      "Engage communities with interactive campaigns",
+      "Leverage AI-driven social analytics",
+      "Expand presence across emerging digital platforms"
+    ]
+  },
+  {
+    "id": "trend_1761900000002_1",
+    "createdAt": "2025-10-31T02:01:30.724638",
+    "status": "active",
+    "industry": "Entertainment",
+    "dataSources": [
+      "Facebook",
+      "LinkedIn"
+    ],
+    "keywords": [
+      "Gaming",
+      "AI Music",
+      "Virtual Concerts"
+    ],
+    "trendType": "Predicted",
+    "timeframe": "Short-term",
+    "title": "Next-Gen Shifts Transforming Entertainment",
+    "engagementScore": 66,
+    "prediction": "Recent data from Facebook, LinkedIn reveals evolving interest across sectors, as companies merge creativity with analytics. Global markets are reacting with optimism.",
+    "actionItems": [
+      "Deploy pilot programs with measurable outcomes",
+      "Adopt transparent reporting to attract partners",
+      "Integrate trend forecasting into product design",
+      "Collaborate with influencers and educators",
+      "Refine audience segmentation using engagement metrics"
+    ]
+  },
+  {
+    "id": "trend_1761900000002_2",
+    "createdAt": "2025-10-31T02:01:30.724643",
+    "status": "active",
+    "industry": "Entertainment",
+    "dataSources": [
+      "Facebook",
+      "LinkedIn"
+    ],
+    "keywords": [
+      "Gaming",
+      "AI Music",
+      "Virtual Concerts"
+    ],
+    "trendType": "Predicted",
+    "timeframe": "Short-term",
+    "title": "How Entertainment is Adapting to Rapid Change",
+    "engagementScore": 49,
+    "prediction": "Social and trend signals suggest that Entertainment is entering a new era of adaptive innovation. Cross-platform collaboration is fueling innovation momentum.",
+    "actionItems": [
+      "Research behavioral data to anticipate shifts",
+      "Join research consortiums or open-source alliances",
+      "Encourage internal creativity workshops",
+      "Track adoption timelines quarterly",
+      "Curate a long-term innovation roadmap"
+    ]
+  },
+  {
+    "id": "trend_1761900000003_0",
+    "createdAt": "2025-10-31T02:01:30.724673",
+    "status": "active",
+    "industry": "Tech",
+    "dataSources": [
+      "Facebook",
+      "LinkedIn"
+    ],
+    "keywords": [
+      "Edge Cloud",
+      "Blockchain",
+      "Quantum Computing"
+    ],
+    "trendType": "Current",
+    "timeframe": "Seasonal",
+    "title": "Emerging Momentum in Tech",
+    "engagementScore": 83,
+    "prediction": "Based on Facebook, LinkedIn, interest around emerging topics like Edge Cloud, Blockchain is surging. Cross-platform collaboration is fueling innovation momentum.",
+    "actionItems": [
+      "Host cross-industry panels on innovation",
+      "Invest in agile transformation strategies",
+      "Engage communities with interactive campaigns",
+      "Leverage AI-driven social analytics",
+      "Expand presence across emerging digital platforms"
+    ]
+  },
+  {
+    "id": "trend_1761900000003_1",
+    "createdAt": "2025-10-31T02:01:30.724679",
+    "status": "active",
+    "industry": "Tech",
+    "dataSources": [
+      "Facebook",
+      "LinkedIn"
+    ],
+    "keywords": [
+      "Edge Cloud",
+      "Blockchain",
+      "Quantum Computing"
+    ],
+    "trendType": "Current",
+    "timeframe": "Seasonal",
+    "title": "Next-Gen Shifts Transforming Tech",
+    "engagementScore": 70,
+    "prediction": "Recent data from Facebook, LinkedIn reveals evolving interest across sectors, as companies merge creativity with analytics. Analysts expect notable policy shifts to follow.",
+    "actionItems": [
+      "Deploy pilot programs with measurable outcomes",
+      "Adopt transparent reporting to attract partners",
+      "Integrate trend forecasting into product design",
+      "Collaborate with influencers and educators",
+      "Refine audience segmentation using engagement metrics"
+    ]
+  },
+  {
+    "id": "trend_1761900000003_2",
+    "createdAt": "2025-10-31T02:01:30.724684",
+    "status": "active",
+    "industry": "Tech",
+    "dataSources": [
+      "Facebook",
+      "LinkedIn"
+    ],
+    "keywords": [
+      "Edge Cloud",
+      "Blockchain",
+      "Quantum Computing"
+    ],
+    "trendType": "Current",
+    "timeframe": "Seasonal",
+    "title": "How Tech is Adapting to Rapid Change",
+    "engagementScore": 37,
+    "prediction": "Social and trend signals suggest that Tech is entering a new era of adaptive innovation. Long-term indicators point toward structural transformation.",
+    "actionItems": [
+      "Research behavioral data to anticipate shifts",
+      "Join research consortiums or open-source alliances",
+      "Encourage internal creativity workshops",
+      "Track adoption timelines quarterly",
+      "Curate a long-term innovation roadmap"
+    ]
+  },
+  {
+    "id": "trend_1761900000004_0",
+    "createdAt": "2025-10-31T02:01:30.724711",
+    "status": "active",
+    "industry": "Entertainment",
+    "dataSources": [
+      "Tiktok"
+    ],
+    "keywords": [
+      "Virtual Concerts",
+      "Gaming",
+      "AI Music"
+    ],
+    "trendType": "Predicted",
+    "timeframe": "Short-term",
+    "title": "Emerging Momentum in Entertainment",
+    "engagementScore": 94,
+    "prediction": "Based on Tiktok, interest around emerging topics like Virtual Concerts, Gaming is surging. Long-term indicators point toward structural transformation.",
+    "actionItems": [
+      "Host cross-industry panels on innovation",
+      "Invest in agile transformation strategies",
+      "Engage communities with interactive campaigns",
+      "Leverage AI-driven social analytics",
+      "Expand presence across emerging digital platforms"
+    ]
+  },
+  {
+    "id": "trend_1761900000004_1",
+    "createdAt": "2025-10-31T02:01:30.724714",
+    "status": "active",
+    "industry": "Entertainment",
+    "dataSources": [
+      "Tiktok"
+    ],
+    "keywords": [
+      "Virtual Concerts",
+      "Gaming",
+      "AI Music"
+    ],
+    "trendType": "Predicted",
+    "timeframe": "Short-term",
+    "title": "Next-Gen Shifts Transforming Entertainment",
+    "engagementScore": 73,
+    "prediction": "Recent data from Tiktok reveals evolving interest across sectors, as companies merge creativity with analytics. Cross-platform collaboration is fueling innovation momentum.",
+    "actionItems": [
+      "Deploy pilot programs with measurable outcomes",
+      "Adopt transparent reporting to attract partners",
+      "Integrate trend forecasting into product design",
+      "Collaborate with influencers and educators",
+      "Refine audience segmentation using engagement metrics"
+    ]
+  },
+  {
+    "id": "trend_1761900000004_2",
+    "createdAt": "2025-10-31T02:01:30.724717",
+    "status": "active",
+    "industry": "Entertainment",
+    "dataSources": [
+      "Tiktok"
+    ],
+    "keywords": [
+      "Virtual Concerts",
+      "Gaming",
+      "AI Music"
+    ],
+    "trendType": "Predicted",
+    "timeframe": "Short-term",
+    "title": "How Entertainment is Adapting to Rapid Change",
+    "engagementScore": 40,
+    "prediction": "Social and trend signals suggest that Entertainment is entering a new era of adaptive innovation. Early adopters are already leveraging data-driven insight.",
+    "actionItems": [
+      "Research behavioral data to anticipate shifts",
+      "Join research consortiums or open-source alliances",
+      "Encourage internal creativity workshops",
+      "Track adoption timelines quarterly",
+      "Curate a long-term innovation roadmap"
+    ]
+  },
+  {
+    "id": "trend_1761900000005_0",
+    "createdAt": "2025-10-31T02:01:30.724732",
+    "status": "active",
+    "industry": "Science",
+    "dataSources": [
+      "Google Trends"
+    ],
+    "keywords": [
+      "Fusion Energy",
+      "Biotech",
+      "Space Exploration"
+    ],
+    "trendType": "Predicted",
+    "timeframe": "Short-term",
+    "title": "Emerging Momentum in Science",
+    "engagementScore": 80,
+    "prediction": "Based on Google Trends, interest around emerging topics like Fusion Energy, Biotech is surging. Long-term indicators point toward structural transformation.",
+    "actionItems": [
+      "Host cross-industry panels on innovation",
+      "Invest in agile transformation strategies",
+      "Engage communities with interactive campaigns",
+      "Leverage AI-driven social analytics",
+      "Expand presence across emerging digital platforms"
+    ]
+  },
+  {
+    "id": "trend_1761900000005_1",
+    "createdAt": "2025-10-31T02:01:30.724735",
+    "status": "active",
+    "industry": "Science",
+    "dataSources": [
+      "Google Trends"
+    ],
+    "keywords": [
+      "Fusion Energy",
+      "Biotech",
+      "Space Exploration"
+    ],
+    "trendType": "Predicted",
+    "timeframe": "Short-term",
+    "title": "Next-Gen Shifts Transforming Science",
+    "engagementScore": 63,
+    "prediction": "Recent data from Google Trends reveals evolving interest across sectors, as companies merge creativity with analytics. Cross-platform collaboration is fueling innovation momentum.",
+    "actionItems": [
+      "Deploy pilot programs with measurable outcomes",
+      "Adopt transparent reporting to attract partners",
+      "Integrate trend forecasting into product design",
+      "Collaborate with influencers and educators",
+      "Refine audience segmentation using engagement metrics"
+    ]
+  },
+  {
+    "id": "trend_1761900000005_2",
+    "createdAt": "2025-10-31T02:01:30.724737",
+    "status": "active",
+    "industry": "Science",
+    "dataSources": [
+      "Google Trends"
+    ],
+    "keywords": [
+      "Fusion Energy",
+      "Biotech",
+      "Space Exploration"
+    ],
+    "trendType": "Predicted",
+    "timeframe": "Short-term",
+    "title": "How Science is Adapting to Rapid Change",
+    "engagementScore": 35,
+    "prediction": "Social and trend signals suggest that Science is entering a new era of adaptive innovation. Emerging startups are defining the competitive frontier.",
+    "actionItems": [
+      "Research behavioral data to anticipate shifts",
+      "Join research consortiums or open-source alliances",
+      "Encourage internal creativity workshops",
+      "Track adoption timelines quarterly",
+      "Curate a long-term innovation roadmap"
+    ]
+  },
+  {
+    "id": "trend_1761900000006_0",
+    "createdAt": "2025-10-31T02:01:30.724760",
+    "status": "active",
+    "industry": "Education",
+    "dataSources": [
+      "Facebook"
+    ],
+    "keywords": [
+      "Gamified Learning",
+      "STEM",
+      "AI Tutors"
+    ],
+    "trendType": "Predicted",
+    "timeframe": "Short-term",
+    "title": "Emerging Momentum in Education",
+    "engagementScore": 84,
+    "prediction": "Based on Facebook, interest around emerging topics like Gamified Learning, STEM is surging. Global markets are reacting with optimism.",
+    "actionItems": [
+      "Host cross-industry panels on innovation",
+      "Invest in agile transformation strategies",
+      "Engage communities with interactive campaigns",
+      "Leverage AI-driven social analytics",
+      "Expand presence across emerging digital platforms"
+    ]
+  },
+  {
+    "id": "trend_1761900000006_1",
+    "createdAt": "2025-10-31T02:01:30.724766",
+    "status": "active",
+    "industry": "Education",
+    "dataSources": [
+      "Facebook"
+    ],
+    "keywords": [
+      "Gamified Learning",
+      "STEM",
+      "AI Tutors"
+    ],
+    "trendType": "Predicted",
+    "timeframe": "Short-term",
+    "title": "Next-Gen Shifts Transforming Education",
+    "engagementScore": 73,
+    "prediction": "Recent data from Facebook reveals evolving interest across sectors, as companies merge creativity with analytics. Long-term indicators point toward structural transformation.",
+    "actionItems": [
+      "Deploy pilot programs with measurable outcomes",
+      "Adopt transparent reporting to attract partners",
+      "Integrate trend forecasting into product design",
+      "Collaborate with influencers and educators",
+      "Refine audience segmentation using engagement metrics"
+    ]
+  },
+  {
+    "id": "trend_1761900000006_2",
+    "createdAt": "2025-10-31T02:01:30.724771",
+    "status": "active",
+    "industry": "Education",
+    "dataSources": [
+      "Facebook"
+    ],
+    "keywords": [
+      "Gamified Learning",
+      "STEM",
+      "AI Tutors"
+    ],
+    "trendType": "Predicted",
+    "timeframe": "Short-term",
+    "title": "How Education is Adapting to Rapid Change",
+    "engagementScore": 50,
+    "prediction": "Social and trend signals suggest that Education is entering a new era of adaptive innovation. Technological acceleration continues to reshape operations.",
+    "actionItems": [
+      "Research behavioral data to anticipate shifts",
+      "Join research consortiums or open-source alliances",
+      "Encourage internal creativity workshops",
+      "Track adoption timelines quarterly",
+      "Curate a long-term innovation roadmap"
+    ]
+  },
+  {
+    "id": "trend_1761900000007_0",
+    "createdAt": "2025-10-31T02:01:30.724803",
+    "status": "active",
+    "industry": "All Industries",
+    "dataSources": [
+      "Tiktok"
+    ],
+    "keywords": [
+      "AI Integration",
+      "Automation",
+      "Sustainability"
+    ],
+    "trendType": "Current",
+    "timeframe": "Mid-term",
+    "title": "Emerging Momentum in All Industries",
+    "engagementScore": 92,
+    "prediction": "Based on Tiktok, interest around emerging topics like AI Integration, Automation is surging. Analysts expect notable policy shifts to follow.",
+    "actionItems": [
+      "Host cross-industry panels on innovation",
+      "Invest in agile transformation strategies",
+      "Engage communities with interactive campaigns",
+      "Leverage AI-driven social analytics",
+      "Expand presence across emerging digital platforms"
+    ]
+  },
+  {
+    "id": "trend_1761900000007_1",
+    "createdAt": "2025-10-31T02:01:30.724808",
+    "status": "active",
+    "industry": "All Industries",
+    "dataSources": [
+      "Tiktok"
+    ],
+    "keywords": [
+      "AI Integration",
+      "Automation",
+      "Sustainability"
+    ],
+    "trendType": "Current",
+    "timeframe": "Mid-term",
+    "title": "Next-Gen Shifts Transforming All Industries",
+    "engagementScore": 60,
+    "prediction": "Recent data from Tiktok reveals evolving interest across sectors, as companies merge creativity with analytics. Early adopters are already leveraging data-driven insight.",
+    "actionItems": [
+      "Deploy pilot programs with measurable outcomes",
+      "Adopt transparent reporting to attract partners",
+      "Integrate trend forecasting into product design",
+      "Collaborate with influencers and educators",
+      "Refine audience segmentation using engagement metrics"
+    ]
+  },
+  {
+    "id": "trend_1761900000007_2",
+    "createdAt": "2025-10-31T02:01:30.724812",
+    "status": "active",
+    "industry": "All Industries",
+    "dataSources": [
+      "Tiktok"
+    ],
+    "keywords": [
+      "AI Integration",
+      "Automation",
+      "Sustainability"
+    ],
+    "trendType": "Current",
+    "timeframe": "Mid-term",
+    "title": "How All Industries is Adapting to Rapid Change",
+    "engagementScore": 43,
+    "prediction": "Social and trend signals suggest that All Industries is entering a new era of adaptive innovation. Analysts expect notable policy shifts to follow.",
+    "actionItems": [
+      "Research behavioral data to anticipate shifts",
+      "Join research consortiums or open-source alliances",
+      "Encourage internal creativity workshops",
+      "Track adoption timelines quarterly",
+      "Curate a long-term innovation roadmap"
+    ]
+  },
+  {
+    "id": "trend_1761900000008_0",
+    "createdAt": "2025-10-31T02:01:30.724834",
+    "status": "active",
+    "industry": "Business",
+    "dataSources": [
+      "Facebook",
+      "LinkedIn"
+    ],
+    "keywords": [
+      "FinTech",
+      "Digital Transformation",
+      "Remote Work"
+    ],
+    "trendType": "Current",
+    "timeframe": "Seasonal",
+    "title": "Emerging Momentum in Business",
+    "engagementScore": 93,
+    "prediction": "Based on Facebook, LinkedIn, interest around emerging topics like FinTech, Digital Transformation is surging. Early adopters are already leveraging data-driven insight.",
+    "actionItems": [
+      "Host cross-industry panels on innovation",
+      "Invest in agile transformation strategies",
+      "Engage communities with interactive campaigns",
+      "Leverage AI-driven social analytics",
+      "Expand presence across emerging digital platforms"
+    ]
+  },
+  {
+    "id": "trend_1761900000008_1",
+    "createdAt": "2025-10-31T02:01:30.724837",
+    "status": "active",
+    "industry": "Business",
+    "dataSources": [
+      "Facebook",
+      "LinkedIn"
+    ],
+    "keywords": [
+      "FinTech",
+      "Digital Transformation",
+      "Remote Work"
+    ],
+    "trendType": "Current",
+    "timeframe": "Seasonal",
+    "title": "Next-Gen Shifts Transforming Business",
+    "engagementScore": 58,
+    "prediction": "Recent data from Facebook, LinkedIn reveals evolving interest across sectors, as companies merge creativity with analytics. Early adopters are already leveraging data-driven insight.",
+    "actionItems": [
+      "Deploy pilot programs with measurable outcomes",
+      "Adopt transparent reporting to attract partners",
+      "Integrate trend forecasting into product design",
+      "Collaborate with influencers and educators",
+      "Refine audience segmentation using engagement metrics"
+    ]
+  },
+  {
+    "id": "trend_1761900000008_2",
+    "createdAt": "2025-10-31T02:01:30.724840",
+    "status": "active",
+    "industry": "Business",
+    "dataSources": [
+      "Facebook",
+      "LinkedIn"
+    ],
+    "keywords": [
+      "FinTech",
+      "Digital Transformation",
+      "Remote Work"
+    ],
+    "trendType": "Current",
+    "timeframe": "Seasonal",
+    "title": "How Business is Adapting to Rapid Change",
+    "engagementScore": 40,
+    "prediction": "Social and trend signals suggest that Business is entering a new era of adaptive innovation. Consumer patterns indicate new forms of engagement.",
+    "actionItems": [
+      "Research behavioral data to anticipate shifts",
+      "Join research consortiums or open-source alliances",
+      "Encourage internal creativity workshops",
+      "Track adoption timelines quarterly",
+      "Curate a long-term innovation roadmap"
+    ]
+  },
+  {
+    "id": "trend_1761900000009_0",
+    "createdAt": "2025-10-31T02:01:30.724854",
+    "status": "active",
+    "industry": "All Industries",
+    "dataSources": [
+      "Tiktok"
+    ],
+    "keywords": [
+      "Data Analytics",
+      "Automation",
+      "Innovation"
+    ],
+    "trendType": "Predicted",
+    "timeframe": "Short-term",
+    "title": "Emerging Momentum in All Industries",
+    "engagementScore": 91,
+    "prediction": "Based on Tiktok, interest around emerging topics like Data Analytics, Automation is surging. Technological acceleration continues to reshape operations.",
+    "actionItems": [
+      "Host cross-industry panels on innovation",
+      "Invest in agile transformation strategies",
+      "Engage communities with interactive campaigns",
+      "Leverage AI-driven social analytics",
+      "Expand presence across emerging digital platforms"
+    ]
+  },
+  {
+    "id": "trend_1761900000009_1",
+    "createdAt": "2025-10-31T02:01:30.724857",
+    "status": "active",
+    "industry": "All Industries",
+    "dataSources": [
+      "Tiktok"
+    ],
+    "keywords": [
+      "Data Analytics",
+      "Automation",
+      "Innovation"
+    ],
+    "trendType": "Predicted",
+    "timeframe": "Short-term",
+    "title": "Next-Gen Shifts Transforming All Industries",
+    "engagementScore": 55,
+    "prediction": "Recent data from Tiktok reveals evolving interest across sectors, as companies merge creativity with analytics. Consumer patterns indicate new forms of engagement.",
+    "actionItems": [
+      "Deploy pilot programs with measurable outcomes",
+      "Adopt transparent reporting to attract partners",
+      "Integrate trend forecasting into product design",
+      "Collaborate with influencers and educators",
+      "Refine audience segmentation using engagement metrics"
+    ]
+  },
+  {
+    "id": "trend_1761900000009_2",
+    "createdAt": "2025-10-31T02:01:30.724860",
+    "status": "active",
+    "industry": "All Industries",
+    "dataSources": [
+      "Tiktok"
+    ],
+    "keywords": [
+      "Data Analytics",
+      "Automation",
+      "Innovation"
+    ],
+    "trendType": "Predicted",
+    "timeframe": "Short-term",
+    "title": "How All Industries is Adapting to Rapid Change",
+    "engagementScore": 38,
+    "prediction": "Social and trend signals suggest that All Industries is entering a new era of adaptive innovation. Technological acceleration continues to reshape operations.",
+    "actionItems": [
+      "Research behavioral data to anticipate shifts",
+      "Join research consortiums or open-source alliances",
+      "Encourage internal creativity workshops",
+      "Track adoption timelines quarterly",
+      "Curate a long-term innovation roadmap"
+    ]
+  }
+]

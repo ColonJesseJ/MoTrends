@@ -47,7 +47,7 @@ export default function TrendPreview({
                                 Source(s):
                                 <div className="flex flex-1 justify-evenly items-center text-3xl">
                                     {jsonData.dataSources.includes('Google Trends') && <FaGoogle />}
-                                    {jsonData.dataSources.includes('TikTok') && <FaTiktok />}
+                                    {jsonData.dataSources.includes('Tiktok') && <FaTiktok />}
                                     {jsonData.dataSources.includes('Facebook') && <FaFacebook />}
                                     {jsonData.dataSources.includes('LinkedIn') && <FaLinkedin />}
                                 </div>

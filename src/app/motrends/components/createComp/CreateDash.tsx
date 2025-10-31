@@ -17,6 +17,7 @@ const CreateDash: React.FC = () => {
     const [generated, setGenerated] = useState(false);
     const [generatedTrends, setGeneratedTrends] = useState<Trend[] | null>(null); // Store generated trends 
 
+    const router = useRouter();
 
     const { jsonData, setJSONData } = useFormContext();  // new context
 
@@ -40,25 +41,7 @@ const CreateDash: React.FC = () => {
 
     }, [step, jsonData, generatedTrends])
 
-    const downloadJSONFile = (trends: Trend[]) => {
-        const jsonString = JSON.stringify(trends, null, 2);
-        const blob = new Blob([jsonString], { type: 'application/json' });
-
-        // download link
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = `motrends-output-${Date.now()}.json`; // Filename
-
-        // Download
-        document.body.appendChild(link);
-        link.click();
-
-        document.body.removeChild(link);
-        URL.revokeObjectURL(url);
-    };
-
-    const handleSave = () => {
+    const handleSave = async () => {
         if (!generatedTrends) {
             alert('Trends not generated');
             return;
@@ -67,7 +50,13 @@ const CreateDash: React.FC = () => {
         const existingTrends = JSON.parse(localStorage.getItem('motrends') || '[]');
         const allTrends = [...existingTrends, ...generatedTrends];
         localStorage.setItem('motrends', JSON.stringify(allTrends));
-        downloadJSONFile(generatedTrends);
+
+        // send trends to the server
+        await fetch("/api/saveToFile", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(generatedTrends),
+        });
 
         // Reset form and generated trends
         setJSONData({
@@ -85,7 +74,7 @@ const CreateDash: React.FC = () => {
         alert('Saved Successfully!\n\nRedirecting to View page...');
 
         setTimeout(() => {
-            useRouter().push('/motrends/view');
+            router.push('/motrends/view');
         }, 1000);
     };
 
